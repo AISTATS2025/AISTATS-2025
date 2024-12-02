@@ -12,7 +12,7 @@ Before running the code, ensure you have MATLAB installed with the **Parallel Co
    ```bash
    git clone https://github.com/AISTATS2025/AISTATS-2025.git
 2. Open MATLAB and navigate to the cloned repository folder.
-3. Run the main script.
+3. Run the `main.m` script.
 4. After running main.m, the following variables will be saved:
 - `Theta_opt`: Results from the **G-ISTA** algorithm.
 - `Theta_bl`: Results from **two baseline methods**.
