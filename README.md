@@ -19,3 +19,6 @@ Before running the code, ensure you have MATLAB installed with the **Parallel Co
 - `Theta`: Results from **NetGGM** with Metropolis weights.
 - `Theta_L`: Results from **NetGGM** with Laplacian weights.
 - `Theta_M`: Results from **NetGGM** with Uniform weights.
+- `times`: CPU time from **G-ISTA**, **two baseline methods**, and **NetGGM** with Metropolis weights.
+- `times_L`: CPU time from **NetGGM** with Laplacian weights.
+- `times_M`: CPU time from **NetGGM** with Uniform weights.
