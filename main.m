@@ -49,11 +49,12 @@ lambdas = {
     [1e-3:1e-3:1e-2, 1e-2:1e-2:1e-1],
     [1e-2:1e-2:1e-1, 1e-1:1e-1:1e0],
     [1e-2:1e-2:1e-1, 1e-1:1e-1:1e0],
-}
+};
 times = zeros(3, 6, 6);
 times_L = zeros(3, 6, 6);
 times_M = zeros(3, 6, 6);
 for m = Is
+    I = m;
     Wxs = {genNetwork(0.9, m, p), genNetwork(0.5, m, p)};
     Adj = zeros(m);
     for i = 1:m - 1
