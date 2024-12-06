@@ -155,7 +155,7 @@ for mtcl = 1:100
                 %[Theta{nAgent, gr, iter}, optDist{nAgent, gr, iter}, obj{nAgent, gr, iter}, check] = Network_GGM_par(xs{nAgent, iter}, ns(iter), m, d, lambda, tau, alpha, max_iter, 1e-7, 1e-7, invsigma, Wxs{gr});
                 times(nAgent, gr + 1, iter) = toc;
                 toc
-                while check && norm(kron(ones(1,m), eye(d)) * Theta{nAgent, gr, iter} / m - invsigma, 'fro') ^ 2 / norm(invsigma, 'fro') ^ 2 - minNMSE >= 1e-8
+                while check && abs(norm(kron(ones(1,m), eye(d)) * Theta{nAgent, gr, iter} / m - invsigma, 'fro') ^ 2 / norm(invsigma, 'fro') ^ 2 - minNMSE) >= 1e-8
                     if nAgent == 1
                         if gr == 1
                             tau = 1.25 * tau;
@@ -195,7 +195,7 @@ for mtcl = 1:100
                 %[Theta{nAgent, gr, iter}, optDist{nAgent, gr, iter}, obj{nAgent, gr, iter}, check] = Network_GGM_par(xs{nAgent, iter}, ns(iter), m, d, lambda, tau, alpha, max_iter, 1e-7, 1e-7, invsigma, Wxs{gr});
                 times_L(nAgent, gr, iter) = toc;
                 toc
-                while check && norm(kron(ones(1,m), eye(d)) * Theta_L{nAgent, gr, iter} / m - invsigma, 'fro') ^ 2 / norm(invsigma, 'fro') ^ 2 - minNMSE >= 1e-8
+                while check && abs(norm(kron(ones(1,m), eye(d)) * Theta_L{nAgent, gr, iter} / m - invsigma, 'fro') ^ 2 / norm(invsigma, 'fro') ^ 2 - minNMSE) >= 1e-8
                     if nAgent == 1
                         if gr == 1
                             tau = 1.25 * tau;
@@ -235,7 +235,7 @@ for mtcl = 1:100
                 %[Theta{nAgent, gr, iter}, optDist{nAgent, gr, iter}, obj{nAgent, gr, iter}, check] = Network_GGM_par(xs{nAgent, iter}, ns(iter), m, d, lambda, tau, alpha, max_iter, 1e-7, 1e-7, invsigma, Wxs{gr});
                 times_M(nAgent, gr, iter) = toc;
                 toc
-                while check && norm(kron(ones(1,m), eye(d)) * Theta_M{nAgent, gr, iter} / m - invsigma, 'fro') ^ 2 / norm(invsigma, 'fro') ^ 2 - minNMSE >= 1e-8
+                while check && abs(norm(kron(ones(1,m), eye(d)) * Theta_M{nAgent, gr, iter} / m - invsigma, 'fro') ^ 2 / norm(invsigma, 'fro') ^ 2 - minNMSE) >= 1e-8
                     if nAgent == 1
                         if gr == 1
                             tau = 1.25 * tau;
